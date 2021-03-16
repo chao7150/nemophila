@@ -1,0 +1,14 @@
+{
+  "name": "nemophila-chrome-extension",
+  "version": "1.0.0",
+  "description": "send tweet to nemophila server",
+  "permissions": ["declarativeContent", "<all_urls>"],
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://tweetdeck.twitter.com/*"],
+      "js": ["content_scripts.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
